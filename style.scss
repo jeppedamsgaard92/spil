@@ -1,0 +1,21 @@
+@import 'partial';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.checkered-grid-container {
+    width: 100vw;
+    height: 200px;
+    background: 
+        linear-gradient(black 50%, white 50%), /*lineær gradient, horizontal, der er sort og hvid på hver anden.*/
+        linear-gradient(white 50%, black 50%), /*samme der bare starter på hvid.*/
+        linear-gradient(white 50%, black 50%),
+        linear-gradient(black 50%, white 50%);
+    background-size: 50px 50px;
+}
