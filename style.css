@@ -1,0 +1,394 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* SPIL-BOARDER */
+.spil-boarder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100vw;
+  background-color: #F5F4D1;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 200px;
+  padding-left: 200px;
+}
+
+/*CHECKERED FLAG*/
+.checkered-grid-container {
+  border: solid 2px black;
+  background-color: black;
+  width: 100%;
+}
+.checkered-grid-container .checkered-line1 {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(90deg, white 50%, transparent 50%) 0 0; /*90deg er ned. linjer af hvid og transparent. Linjerne er lige så høje som bredde, så de ligner kasser.*/
+  background-size: 100px; /*længde af hver hvid/sort boks.*/
+}
+.checkered-grid-container .checkered-line2 {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(90deg, white 50%, transparent 50%) -50px 0; /*forskudt -50px så den starter på transparant.*/
+  background-size: 100px; /*længde af hver hvid/sort boks.*/
+}
+
+/*SPILLEPLADE*/
+.spilleplade {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(20, 100px);
+  gap: 10px;
+  /* ROWS */
+}
+.spilleplade .blue,
+.spilleplade .red,
+.spilleplade .green,
+.spilleplade .black {
+  border-radius: 10px;
+}
+.spilleplade .blue {
+  background-color: blue;
+}
+.spilleplade .red {
+  background-color: red;
+}
+.spilleplade .green {
+  background-color: green;
+}
+.spilleplade .black {
+  background-color: black;
+}
+.spilleplade #r1c1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+.spilleplade #r1c2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+.spilleplade #r1c3 {
+  grid-row: 1;
+  grid-column: 3;
+}
+.spilleplade #r1c4 {
+  grid-row: 1;
+  grid-column: 4;
+}
+.spilleplade #r2c1 {
+  grid-row: 2;
+  grid-column: 1;
+}
+.spilleplade #r2c2 {
+  grid-row: 2;
+  grid-column: 2;
+}
+.spilleplade #r2c3 {
+  grid-row: 2;
+  grid-column: 3;
+}
+.spilleplade #r2c4 {
+  grid-row: 2;
+  grid-column: 4;
+}
+.spilleplade #r3c1 {
+  grid-row: 3;
+  grid-column: 1;
+}
+.spilleplade #r3c2 {
+  grid-row: 3;
+  grid-column: 2;
+}
+.spilleplade #r3c3 {
+  grid-row: 3;
+  grid-column: 3;
+}
+.spilleplade #r3c4 {
+  grid-row: 3;
+  grid-column: 4;
+}
+.spilleplade #r4c1 {
+  grid-row: 4;
+  grid-column: 1;
+}
+.spilleplade #r4c2 {
+  grid-row: 4;
+  grid-column: 2;
+}
+.spilleplade #r4c3 {
+  grid-row: 4;
+  grid-column: 3;
+}
+.spilleplade #r4c4 {
+  grid-row: 4;
+  grid-column: 4;
+}
+.spilleplade #r5c1 {
+  grid-row: 5;
+  grid-column: 1;
+}
+.spilleplade #r5c2 {
+  grid-row: 5;
+  grid-column: 2;
+}
+.spilleplade #r5c3 {
+  grid-row: 5;
+  grid-column: 3;
+}
+.spilleplade #r5c4 {
+  grid-row: 5;
+  grid-column: 4;
+}
+.spilleplade #r6c1 {
+  grid-row: 6;
+  grid-column: 1;
+}
+.spilleplade #r6c2 {
+  grid-row: 6;
+  grid-column: 2;
+}
+.spilleplade #r6c3 {
+  grid-row: 6;
+  grid-column: 3;
+}
+.spilleplade #r6c4 {
+  grid-row: 6;
+  grid-column: 4;
+}
+.spilleplade #r7c1 {
+  grid-row: 7;
+  grid-column: 1;
+}
+.spilleplade #r7c2 {
+  grid-row: 7;
+  grid-column: 2;
+}
+.spilleplade #r7c3 {
+  grid-row: 7;
+  grid-column: 3;
+}
+.spilleplade #r7c4 {
+  grid-row: 7;
+  grid-column: 4;
+}
+.spilleplade #r8c1 {
+  grid-row: 8;
+  grid-column: 1;
+}
+.spilleplade #r8c2 {
+  grid-row: 8;
+  grid-column: 2;
+}
+.spilleplade #r8c3 {
+  grid-row: 8;
+  grid-column: 3;
+}
+.spilleplade #r8c4 {
+  grid-row: 8;
+  grid-column: 4;
+}
+.spilleplade #r9c1 {
+  grid-row: 9;
+  grid-column: 1;
+}
+.spilleplade #r9c2 {
+  grid-row: 9;
+  grid-column: 2;
+}
+.spilleplade #r9c3 {
+  grid-row: 9;
+  grid-column: 3;
+}
+.spilleplade #r9c4 {
+  grid-row: 9;
+  grid-column: 4;
+}
+.spilleplade #r10c1 {
+  grid-row: 10;
+  grid-column: 1;
+}
+.spilleplade #r10c2 {
+  grid-row: 10;
+  grid-column: 2;
+}
+.spilleplade #r10c3 {
+  grid-row: 10;
+  grid-column: 3;
+}
+.spilleplade #r10c4 {
+  grid-row: 10;
+  grid-column: 4;
+}
+.spilleplade #r11c1 {
+  grid-row: 11;
+  grid-column: 1;
+}
+.spilleplade #r11c2 {
+  grid-row: 11;
+  grid-column: 2;
+}
+.spilleplade #r11c3 {
+  grid-row: 11;
+  grid-column: 3;
+}
+.spilleplade #r11c4 {
+  grid-row: 11;
+  grid-column: 4;
+}
+.spilleplade #r12c1 {
+  grid-row: 12;
+  grid-column: 1;
+}
+.spilleplade #r12c2 {
+  grid-row: 12;
+  grid-column: 2;
+}
+.spilleplade #r12c3 {
+  grid-row: 12;
+  grid-column: 3;
+}
+.spilleplade #r12c4 {
+  grid-row: 12;
+  grid-column: 4;
+}
+.spilleplade #r13c1 {
+  grid-row: 13;
+  grid-column: 1;
+}
+.spilleplade #r13c2 {
+  grid-row: 13;
+  grid-column: 2;
+}
+.spilleplade #r13c3 {
+  grid-row: 13;
+  grid-column: 3;
+}
+.spilleplade #r13c4 {
+  grid-row: 13;
+  grid-column: 4;
+}
+.spilleplade #r14c1 {
+  grid-row: 14;
+  grid-column: 1;
+}
+.spilleplade #r14c2 {
+  grid-row: 14;
+  grid-column: 2;
+}
+.spilleplade #r14c3 {
+  grid-row: 14;
+  grid-column: 3;
+}
+.spilleplade #r14c4 {
+  grid-row: 14;
+  grid-column: 4;
+}
+.spilleplade #r15c1 {
+  grid-row: 15;
+  grid-column: 1;
+}
+.spilleplade #r15c2 {
+  grid-row: 15;
+  grid-column: 2;
+}
+.spilleplade #r15c3 {
+  grid-row: 15;
+  grid-column: 3;
+}
+.spilleplade #r15c4 {
+  grid-row: 15;
+  grid-column: 4;
+}
+.spilleplade #r16c1 {
+  grid-row: 16;
+  grid-column: 1;
+}
+.spilleplade #r16c2 {
+  grid-row: 16;
+  grid-column: 2;
+}
+.spilleplade #r16c3 {
+  grid-row: 16;
+  grid-column: 3;
+}
+.spilleplade #r16c4 {
+  grid-row: 16;
+  grid-column: 4;
+}
+.spilleplade #r17c1 {
+  grid-row: 17;
+  grid-column: 1;
+}
+.spilleplade #r17c2 {
+  grid-row: 17;
+  grid-column: 2;
+}
+.spilleplade #r17c3 {
+  grid-row: 17;
+  grid-column: 3;
+}
+.spilleplade #r17c4 {
+  grid-row: 17;
+  grid-column: 4;
+}
+.spilleplade #r18c1 {
+  grid-row: 18;
+  grid-column: 1;
+}
+.spilleplade #r18c2 {
+  grid-row: 18;
+  grid-column: 2;
+}
+.spilleplade #r18c3 {
+  grid-row: 18;
+  grid-column: 3;
+}
+.spilleplade #r18c4 {
+  grid-row: 18;
+  grid-column: 4;
+}
+.spilleplade #r19c1 {
+  grid-row: 19;
+  grid-column: 1;
+}
+.spilleplade #r19c2 {
+  grid-row: 19;
+  grid-column: 2;
+}
+.spilleplade #r19c3 {
+  grid-row: 19;
+  grid-column: 3;
+}
+.spilleplade #r19c4 {
+  grid-row: 19;
+  grid-column: 4;
+}
+.spilleplade #r20c1 {
+  grid-row: 20;
+  grid-column: 1;
+}
+.spilleplade #r20c2 {
+  grid-row: 20;
+  grid-column: 2;
+}
+.spilleplade #r20c3 {
+  grid-row: 20;
+  grid-column: 3;
+}
+.spilleplade #r20c4 {
+  grid-row: 20;
+  grid-column: 4;
+}/*# sourceMappingURL=style.css.map */

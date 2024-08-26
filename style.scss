@@ -8,14 +8,183 @@
 html {
     font-size: 16px;
 }
-
-.checkered-grid-container {
-    width: 100vw;
-    height: 200px;
-    background: 
-        linear-gradient(black 50%, white 50%), /*lineær gradient, horizontal, der er sort og hvid på hver anden.*/
-        linear-gradient(white 50%, black 50%), /*samme der bare starter på hvid.*/
-        linear-gradient(white 50%, black 50%),
-        linear-gradient(black 50%, white 50%);
-    background-size: 50px 50px;
+body {
+    min-height: 100vh;
 }
+
+/* SPIL-BOARDER */
+.spil-boarder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 10px;
+    width: 100vw;
+    background-color: #F5F4D1;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+/*CHECKERED FLAG*/
+.checkered-grid-container {
+    border: solid 2px black;
+    background-color: black;
+    width: 100%;
+
+    .checkered-line1 {
+        width: 100%;
+        height: 50px;
+        background:
+            linear-gradient(90deg, white 50%, transparent 50%) 0 0; /*90deg er ned. linjer af hvid og transparent. Linjerne er lige så høje som bredde, så de ligner kasser.*/
+        background-size: 100px; /*længde af hver hvid/sort boks.*/
+    }
+    .checkered-line2 {
+        width: 100%;
+        height: 50px;
+        background:
+            linear-gradient(90deg, white 50%, transparent 50%) -50px 0; /*forskudt -50px så den starter på transparant.*/
+        background-size: 100px; /*længde af hver hvid/sort boks.*/
+    }
+}
+
+/*SPILLEPLADE*/
+// .spilleplade-container {
+//     display: flex;
+//     justify-content: center;
+
+    .spilleplade {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: repeat(20, 100px);
+        gap: 10px;
+
+        .blue,
+        .red,
+        .green,
+        .black {
+            border-radius: 10px; 
+        }
+    
+        .blue {
+            background-color: blue;
+        }
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+        .black {
+            background-color: black;
+        }
+
+        /* ROWS */
+        #r1c1 { grid-row: 1; grid-column: 1; }
+        #r1c2 { grid-row: 1; grid-column: 2; }
+        #r1c3 { grid-row: 1; grid-column: 3; }
+        #r1c4 { grid-row: 1; grid-column: 4; }
+
+        #r2c1 { grid-row: 2; grid-column: 1; }
+        #r2c2 { grid-row: 2; grid-column: 2; }
+        #r2c3 { grid-row: 2; grid-column: 3; }
+        #r2c4 { grid-row: 2; grid-column: 4; }
+
+        #r3c1 { grid-row: 3; grid-column: 1; }
+        #r3c2 { grid-row: 3; grid-column: 2; }
+        #r3c3 { grid-row: 3; grid-column: 3; }
+        #r3c4 { grid-row: 3; grid-column: 4; }
+
+        #r4c1 { grid-row: 4; grid-column: 1; }
+        #r4c2 { grid-row: 4; grid-column: 2; }
+        #r4c3 { grid-row: 4; grid-column: 3; }
+        #r4c4 { grid-row: 4; grid-column: 4; }
+
+        #r5c1 { grid-row: 5; grid-column: 1; }
+        #r5c2 { grid-row: 5; grid-column: 2; }
+        #r5c3 { grid-row: 5; grid-column: 3; }
+        #r5c4 { grid-row: 5; grid-column: 4; }
+
+        #r6c1 { grid-row: 6; grid-column: 1; }
+        #r6c2 { grid-row: 6; grid-column: 2; }
+        #r6c3 { grid-row: 6; grid-column: 3; }
+        #r6c4 { grid-row: 6; grid-column: 4; }
+
+        #r7c1 { grid-row: 7; grid-column: 1; }
+        #r7c2 { grid-row: 7; grid-column: 2; }
+        #r7c3 { grid-row: 7; grid-column: 3; }
+        #r7c4 { grid-row: 7; grid-column: 4; }
+
+        #r8c1 { grid-row: 8; grid-column: 1; }
+        #r8c2 { grid-row: 8; grid-column: 2; }
+        #r8c3 { grid-row: 8; grid-column: 3; }
+        #r8c4 { grid-row: 8; grid-column: 4; }
+
+        #r9c1 { grid-row: 9; grid-column: 1; }
+        #r9c2 { grid-row: 9; grid-column: 2; }
+        #r9c3 { grid-row: 9; grid-column: 3; }
+        #r9c4 { grid-row: 9; grid-column: 4; }
+
+        #r10c1 { grid-row: 10; grid-column: 1; }
+        #r10c2 { grid-row: 10; grid-column: 2; }
+        #r10c3 { grid-row: 10; grid-column: 3; }
+        #r10c4 { grid-row: 10; grid-column: 4; }
+
+        #r11c1 { grid-row: 11; grid-column: 1; }
+        #r11c2 { grid-row: 11; grid-column: 2; }
+        #r11c3 { grid-row: 11; grid-column: 3; }
+        #r11c4 { grid-row: 11; grid-column: 4; }
+
+        #r12c1 { grid-row: 12; grid-column: 1; }
+        #r12c2 { grid-row: 12; grid-column: 2; }
+        #r12c3 { grid-row: 12; grid-column: 3; }
+        #r12c4 { grid-row: 12; grid-column: 4; }
+
+        #r13c1 { grid-row: 13; grid-column: 1; }
+        #r13c2 { grid-row: 13; grid-column: 2; }
+        #r13c3 { grid-row: 13; grid-column: 3; }
+        #r13c4 { grid-row: 13; grid-column: 4; }
+
+        #r14c1 { grid-row: 14; grid-column: 1; }
+        #r14c2 { grid-row: 14; grid-column: 2; }
+        #r14c3 { grid-row: 14; grid-column: 3; }
+        #r14c4 { grid-row: 14; grid-column: 4; }
+
+        #r15c1 { grid-row: 15; grid-column: 1; }
+        #r15c2 { grid-row: 15; grid-column: 2; }
+        #r15c3 { grid-row: 15; grid-column: 3; }
+        #r15c4 { grid-row: 15; grid-column: 4; }
+
+        #r16c1 { grid-row: 16; grid-column: 1; }
+        #r16c2 { grid-row: 16; grid-column: 2; }
+        #r16c3 { grid-row: 16; grid-column: 3; }
+        #r16c4 { grid-row: 16; grid-column: 4; }
+
+        #r17c1 { grid-row: 17; grid-column: 1; }
+        #r17c2 { grid-row: 17; grid-column: 2; }
+        #r17c3 { grid-row: 17; grid-column: 3; }
+        #r17c4 { grid-row: 17; grid-column: 4; }
+
+        #r18c1 { grid-row: 18; grid-column: 1; }
+        #r18c2 { grid-row: 18; grid-column: 2; }
+        #r18c3 { grid-row: 18; grid-column: 3; }
+        #r18c4 { grid-row: 18; grid-column: 4; }
+
+        #r19c1 { grid-row: 19; grid-column: 1; }
+        #r19c2 { grid-row: 19; grid-column: 2; }
+        #r19c3 { grid-row: 19; grid-column: 3; }
+        #r19c4 { grid-row: 19; grid-column: 4; }
+
+        #r20c1 { grid-row: 20; grid-column: 1; }
+        #r20c2 { grid-row: 20; grid-column: 2; }
+        #r20c3 { grid-row: 20; grid-column: 3; }
+        #r20c4 { grid-row: 20; grid-column: 4; }
+
+        
+}
+
+
+//}
+
+
