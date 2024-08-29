@@ -9,6 +9,39 @@ html {
   font-size: 16px;
 }
 
+.kasse {
+  border-radius: 10px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.black {
+  background-color: black;
+}
+
+.sort-tekst {
+  color: black;
+}
+
+.hvid-tekst {
+  color: white;
+}
+
+#red {
+  background-color: red;
+  box-shadow: -5px 5px 0 #6b0c0c;
+}
+
 body {
   min-height: 100vh;
 }
@@ -40,7 +73,6 @@ body {
   font-weight: 200;
   letter-spacing: 0.1rem;
   padding: 5px 20px;
-  border-radius: 10px;
 }
 .spil-assets .hjælp-container .lilla {
   background-color: purple;
@@ -48,6 +80,87 @@ body {
 }
 .spil-assets .hjælp-container .hvid {
   background-color: white;
+}
+.spil-assets .spørgsmålskategorier-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.spil-assets .spørgsmålskategori {
+  display: flex;
+  height: 100px;
+  width: 400px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.spil-assets .kategoritekst {
+  font-family: "Futura LT", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.spil-assets .spørgsmålskategori-kort {
+  position: absolute;
+  top: 50%;
+  display: block;
+  transform: translate(-5%, -50%);
+  border: solid 1px black;
+  padding: 10px;
+  height: 320px;
+  width: 520px;
+  border-radius: 30px;
+}
+.spil-assets .spørgsmålskategori-kort .spørgsmål-og-svar-border {
+  border-radius: 20px;
+  border: solid 1px black;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  background-color: #f9f8ea;
+}
+.spil-assets .spørgsmålskategori-kort .spørgsmål-og-svar-border .spørgsmål-container {
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+}
+.spil-assets .spørgsmålskategori-kort .spørgsmål-og-svar-border .spørgsmål-container p {
+  text-align: center;
+}
+.spil-assets .spørgsmålskategori-kort .spørgsmål-og-svar-border .svar-container {
+  margin: 10px;
+  display: grid;
+  grid-template-rows: 2;
+  grid-template-columns: 2;
+  gap: 10px;
+}
+.spil-assets .spørgsmålskategori-kort .spørgsmål-og-svar-border .svar-container .svar {
+  background-color: #FFD194;
+  border: solid 0.5px black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.spil-assets .spørgsmålskategori-kort .spørgsmål-og-svar-border .svar-container #svar1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+.spil-assets .spørgsmålskategori-kort .spørgsmål-og-svar-border .svar-container #svar2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+.spil-assets .spørgsmålskategori-kort .spørgsmål-og-svar-border .svar-container #svar3 {
+  grid-row: 2;
+  grid-column: 1;
+}
+.spil-assets .spørgsmålskategori-kort .spørgsmål-og-svar-border .svar-container #svar4 {
+  grid-row: 2;
+  grid-column: 2;
 }
 
 .spilleplade-window {
@@ -67,6 +180,7 @@ body {
 
 /*CHECKERED FLAG*/
 .checkered-grid-container {
+  margin-top: 100px;
   border: solid 2px black;
   background-color: black;
   width: 100%;
@@ -90,24 +204,6 @@ body {
   grid-template-rows: repeat(20, 100px);
   gap: 10px;
   /* ROWS */
-}
-.spilleplade .blue,
-.spilleplade .red,
-.spilleplade .green,
-.spilleplade .black {
-  border-radius: 10px;
-}
-.spilleplade .blue {
-  background-color: blue;
-}
-.spilleplade .red {
-  background-color: red;
-}
-.spilleplade .green {
-  background-color: green;
-}
-.spilleplade .black {
-  background-color: black;
 }
 .spilleplade #r1c1 {
   grid-row: 1;
